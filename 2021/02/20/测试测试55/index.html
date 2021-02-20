@@ -27,7 +27,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>工具箱 | NWUzmed&#39;s world</title>
+  <title>测试测试44 | NWUzmed&#39;s world</title>
   
   
 
@@ -355,7 +355,7 @@
   
   
 <div class="cover-wrapper">
-  <cover class='cover links half'>
+  <cover class='cover post half'>
     
     
   <img class='logo' src='https://i.loli.net/2020/09/06/PfMxgeHkScO9WGw.png'/>
@@ -657,20 +657,25 @@
   <div class="l_body">
     <div class='body-wrapper'>
       <div class='l_main'>
-  <article id="links" class="post white-box article-type-links" itemscope itemprop="blogPost">
-    
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
     
+    
+      <a title='测试测试44' href='/2021/02/20/测试测试55/'><img class='thumbnail' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgmcmohen_imgteacher.jpg'></a>
     
     <div class="meta" id="header-meta">
       
         
   
     <h1 class="title">
-      <a href="/tools/index.html">
-        工具箱
+      <a href="/2021/02/20/测试测试55/">
+        测试测试44
       </a>
     </h1>
   
@@ -707,6 +712,14 @@
         
           
             
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/测试/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>测试</p>
+    </a>
+  </div>
+
 
           
         
@@ -736,7 +749,7 @@
           <span class="post-meta-item-icon">
             <i class="fa fa-keyboard"></i>
             <span class="post-meta-item-text">  字数统计: </span>
-            <span class="post-count">0字</span>
+            <span class="post-count">691字</span>
           </span>
         </span>
         &nbsp; | &nbsp;
@@ -744,7 +757,7 @@
           <span class="post-meta-item-icon">
             <i class="fa fa-hourglass-half"></i>
             <span class="post-meta-item-text">  阅读时长≈</span>
-            <span class="post-count">1分</span>
+            <span class="post-count">2分</span>
           </span>
         </span>
       </div>
@@ -765,185 +778,239 @@
   </section>
 
 
-      <section class="article typo l_friends">
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <p>前言：国内加载github的资源比较慢，需要使用<strong>CDN加速</strong>来优化网站打开速度，于是使用jsDelivr+github搭建<strong>免费</strong>的CDN。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>声明：本文参考了<a href="https://www.cnblogs.com/zhsh666/p/11432956.html" target="_blank" rel="noopener">《jsDeliver+github使用教程》</a></p>
+</blockquote>
+<p>jsDelivr 是一个<strong>免费开源</strong>的 CDN 解决方案，用于帮助开发者和站长。包含 JavaScript 库、jQuery 插件、CSS 框架、字体等等 Web 上常用的<strong>静态资源</strong>。</p>
+<p>我们来到其官网，可以看到它的介绍Open Source CDN free, fast, and reliable（<strong>免费、快速、可靠</strong>，<del>不过据说可能会投毒广告，表示目前还没见过广告</del>）<br>下图我们可以看到他似乎和npm,github,wordpress有某种xx关系。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img/jsdelivr.PNG" alt></p>
+<h5 id="大家了解一下就好，下面才开始教程！"><a href="#大家了解一下就好，下面才开始教程！" class="headerlink" title="大家了解一下就好，下面才开始教程！"></a>大家了解一下就好，下面才开始教程！</h5><h1 id="1-新建Github仓库"><a href="#1-新建Github仓库" class="headerlink" title="1. 新建Github仓库"></a>1. 新建Github仓库</h1><p>打开Github官网点new repository或<a href="https://github.com/new" target="_blank" rel="noopener">点击这里直达新建仓库</a></p>
+<p>名字随便取，反正我是CDN (我已经开过一个，所以不能再开一个同名的)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img/github.PNG" alt></p>
+<h1 id="2-克隆Github仓库到本地"><a href="#2-克隆Github仓库到本地" class="headerlink" title="2. 克隆Github仓库到本地"></a>2. 克隆Github仓库到本地</h1><p>打开你新建的仓库，点Clone or Download，然后复制那个链接，也就是仓库的链接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img/clone.PNG" alt></p>
+<p> 接着在本地目录右键 Git Bash Here，执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 刚才复制的仓库链接</span><br></pre></td></tr></table></figure>
+
+<p>(克隆完会在你克隆的地方多出一个与你仓库名相同的文件夹,将git bash进入那个文件夹)</p>
+<p>(注:进入后git bash旁会出现蓝色的master)</p>
+<h1 id="3-上传资源"><a href="#3-上传资源" class="headerlink" title="3.上传资源"></a>3.上传资源</h1><p>复制需要上传的资源到本地与你仓库同名的文件夹中(我的是CDN)<del>(据网上说jsDeliver可以上传100M的资源)</del>，在文件夹目录下右键 Git Bash Here，依次执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status                    //查看状态(可省略)</span><br><span class="line">git add --all                 //添加所有文件到暂存区</span><br><span class="line">git commit -m &apos;第一次提交&apos;      //把文件提交到仓库(单引号内为说明,可随便填)</span><br><span class="line">git push                      //推送至远程仓库</span><br></pre></td></tr></table></figure>
+
+<p>看不懂就按顺序打一遍(如果出现失败就再来一遍,<del>GitHub经常鬼畜</del>)</p>
+<h1 id="4-发布仓库"><a href="#4-发布仓库" class="headerlink" title="4.发布仓库"></a>4.发布仓库</h1><p>在仓库里面点击release发布</p>
+<p><img src="https://i.loli.net/2019/08/19/dku27zoR49ljm1Q.png" alt></p>
+<p>版本号随便填(但不能与发布过的版本重复)</p>
+<p>其它也随便填</p>
+<h1 id="5-引用资源"><a href="#5-引用资源" class="headerlink" title="5.引用资源"></a>5.引用资源</h1><p>万事俱备了！</p>
+<p>可以通过jsDelivr下载了！</p>
+<p>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></p>
+<p>例如我的8.3.rar就是存放在CDN仓库的根目录下：<a href="https://cdn.jsdelivr.net/gh/mcmohen/CDN@1.0/8.3.rar" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/mcmohen/CDN@1.0/8.3.rar</a></p>
+<p>(注：我用户名为mcmohen；仓库为CDN；8.3.rar为1.0版本上传；  路径就是8.3.rar)</p>
+<p><strong>特别提醒：后缀名一定要加</strong></p>
+<h5 id="emsp-emsp-emsp-emsp-ensp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-转自Mohen’s-blog"><a href="#emsp-emsp-emsp-emsp-ensp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-转自Mohen’s-blog" class="headerlink" title="&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;转自Mohen’s blog"></a>&emsp;&emsp;&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;转自<a href="https://mcmohen.com/" target="_blank" rel="noopener">Mohen’s blog</a></h5>
+        </div>
+        
+          <div id="reward">
+  
+  <div>您的赞赏是我最大的动力！❤️</div>
+  
+  <div class="reward">
+    <a href="https://github.com/Kaiyuan/donate-page" target="_blank" class=" tr3" title="Github"><span
+        id="github"></span></a>
+    <ul id="RewardBox" class="list pos-f tr3">
+      
+      
+      <li id="AliPayOR" title="支付宝打赏">AliPay</li>
+      
+      
+      <li id="WeChatPayOR" title="微信打赏">WeChatPay</li>
+      
+      
+      <li id="QQPayOR" title="QQ打赏">QQPay</li>
+      
+    </ul>
+    <div id="RewardText" class="tr3">Donate</div>
+    <div id="QRBox" class="pos-f left-100">
+      <div id="MainBox"></div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    var QRBox = $('#QRBox');
+    var MainBox = $('#MainBox');
+    var AliPayOR = 'https://i.loli.net/2020/08/18/tl1QH7s4S9wvxnV.jpg';
+    var WeChatPayOR = 'https://i.loli.net/2020/08/18/vfcpsTkw3nrAGHi.png';
+    var QQPayOR = 'https://i.loli.net/2020/08/18/7XWiFCByhqlkgnE.png';
+
+    function showQR(QR) {
+      if (QR) {
+        MainBox.css('background-image', 'url(' + QR + ')');
+      }
+      $('#RewardText,#RewardBox,#github').addClass('blur');
+      QRBox.fadeIn(300, function (argument) {
+        MainBox.addClass('showQR');
+      });
+    }
+
+    $('#RewardBox>li').click(function (event) {
+      var thisID = $(this).attr('id');
+      if (thisID === 'AliPayOR') {
+        showQR(AliPayOR);
+      } else if (thisID === 'WeChatPayOR') {
+        showQR(WeChatPayOR);
+      } else if (thisID === 'QQPayOR') {
+        showQR(QQPayOR);
+      }
+    });
+
+    MainBox.click(function (event) {
+      MainBox.removeClass('showQR').addClass('hideQR');
+      setTimeout(function (a) {
+        QRBox.fadeOut(300, function (argument) {
+          MainBox.removeClass('hideQR');
+        });
+        $('#RewardText,#RewardBox,#github').removeClass('blur');
+      }, 600);
+
+    });
+  });
+</script>
+
+        
         
           
-            
-              <div class='friends-group'>
-                
-                  <h2 class='friend-header'>
-                    
-                      <i class="fas fa-tools fa-fw fa-fw" aria-hidden="true"></i>
-                    
-                    实用工具
-                  </h2>
-                
-                <div class='friend-content'>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='https://XDHGLF.github.io/anires/public/'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img20191116223015.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">个人简历</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/base64加密.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgtools-base64.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">base64加密/解密</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/随机密码生成.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgtools-randompw.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">随机密码生成</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/元素周期表.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img20200221124740.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">3D元素周期表</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/科幻时钟.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img20191109215048.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">科幻时钟</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/联系人二维码生成器.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgweiixin.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">联系人二维码生成器</p>
-                        
-                      </div>
-                    </a>
-                  
-                </div>
-              </div>
-            
-          
-            
-              <div class='friends-group'>
-                
-                  <h2 class='friend-header'>
-                    
-                      <i class="fas fa-gamepad fa-fw fa-fw" aria-hidden="true"></i>
-                    
-                    个人常用
-                  </h2>
-                
-                <div class='friend-content'>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='http://www.waysto.work/'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://i.loli.net/2020/08/19/AUEn5B7w9Q4Rkhs.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">沃客导航</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='https://greasyfork.org/zh-CN'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://greasyfork.org/assets/blacklogo96-1221dbbb8f0d47a728f968c35c2e2e03c64276a585b8dceb7a79a17a3f350e8a.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">Greasy Fork</p>
-                        
-                      </div>
-                    </a>
-                  
-                </div>
-              </div>
-            
-          
-            
-              <div class='friends-group'>
-                
-                  <h2 class='friend-header'>
-                    
-                      <i class="fas fa-gamepad fa-fw fa-fw" aria-hidden="true"></i>
-                    
-                    网页游戏
-                  </h2>
-                
-                <div class='friend-content'>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/圈小猫.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img20200221124639.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">圈小猫</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/圈小猫.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img20200221124639.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">测试11</p>
-                        
-                      </div>
-                    </a>
-                  
-                    <a class='friend-card' style='background:#696969; color:#fff'
-                      target="_blank" rel="external nofollow noopener noreferrer" href='/tools/all/圈小猫.html'>
-                      <div class='friend-left'>
-                        <img class='avatar' src='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_imgd570170f4f12e1ee829ca0e85a7dffeb77343a.svg' data-echo='https://cdn.jsdelivr.net/gh/mcmohen/ImageHosting/mcmohen_img20200221124639.png'/>
-                      </div>
-                      <div class='friend-right'>
-                        <p class="friend-name">测试22</p>
-                        
-                      </div>
-                    </a>
-                  
-                </div>
-              </div>
-            
-          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
         
-        <br><hr>
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-20T21:29:25+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2021年2月20日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/测试/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>测试</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CDN/" rel="nofollow"><i class="fas fa-tags" aria-hidden="true"></i>&nbsp;<p>CDN</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://nwuzmed.tk/2021/02/20/测试测试55/&title=测试测试44 | NWUzmed's world&pics=https://i.loli.net/2020/08/18/sxHcI5XDe76aw3q.jpg&summary=前言：国内加载github的资源比较慢，需要使用CDN加速来优化网站打开速度，于是使用jsDelivr+github搭建免费的CDN。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://nwuzmed.tk/2021/02/20/测试测试55/&title=测试测试44 | NWUzmed's world&pics=https://i.loli.net/2020/08/18/sxHcI5XDe76aw3q.jpg&summary=前言：国内加载github的资源比较慢，需要使用CDN加速来优化网站打开速度，于是使用jsDelivr+github搭建免费的CDN。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aQYrDMAwF0N7/0h2Y1UBJ8iVlCrGfV6WkiV8WqmTp9YrX+3edf5Nc//f7z8+f19y8MDAwHst4n67zTeTr6D5HpHxvGBgY+zDOg2YSQJNAnDzl/LmH32NgYGAEIS+/JsnuMDAwMOaM3iZ6qSEGBgZGXnxWj8bykP3VWhwDA+OBjF6p+Z3P/9jfwMDAeAjjPVjnqd69Af3iDhgYGEszqmlfXqAm7OTYrnAMh4GBsQ2j2sicH5YlLysK8RgYGIsy7krXkjSxN4QRBWUMDIwtGflBfI6/a6Ss3NnAwMBYiJEHzUkDsvoSo1eGgYGxAWOUlrXaAL1jtcNwjIGBsTRjXl7mgXg+OhYliBgYGIsyqof41TK1F9abVSoGBsZyjEnyV00xJ0nnRbKIgYGxDSN/WELNhzAmwxYYGBg7MHrjX70DsmrRm+8HAwNjbUa1BK0G2V6hm6SPGBgYuzEmrc1eQlkdKbtoGGBgYGzAqN5oEl7zlLHwojEwMJZm5Mf91SZBtc1ZTRYxMDD2YVR/cG86mBy6RcUzBgbG0oy8Mdl7cDURTPZ2kRpiYGAsx3gXV34kV22FjtoSGBgYSzPy1WsVVA/1qv8PZRIGBsZjGXlhWS1B85ZDEnBH/x4YGBhLMCaDEXnZWehUxCkjBgYGRm8MopcyVneFgYGB0WsrVkc0qsMZzTobAwNjCca8iK02GHrp5iEVAwNjacZd8xq95K83ZNZsZGJgYDyP8QMDQ+tBQfKdvgAAAABJRU5ErkJggg=='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://nwuzmed.tk/2021/02/20/测试测试55/&title=测试测试44 | NWUzmed's world&pics=https://i.loli.net/2020/08/18/sxHcI5XDe76aw3q.jpg&summary=前言：国内加载github的资源比较慢，需要使用CDN加速来优化网站打开速度，于是使用jsDelivr+github搭建免费的CDN。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aQYrDMAwF0N7/0h2Y1UBJ8iVlCrGfV6WkiV8WqmTp9YrX+3edf5Nc//f7z8+f19y8MDAwHst4n67zTeTr6D5HpHxvGBgY+zDOg2YSQJNAnDzl/LmH32NgYGAEIS+/JsnuMDAwMOaM3iZ6qSEGBgZGXnxWj8bykP3VWhwDA+OBjF6p+Z3P/9jfwMDAeAjjPVjnqd69Af3iDhgYGEszqmlfXqAm7OTYrnAMh4GBsQ2j2sicH5YlLysK8RgYGIsy7krXkjSxN4QRBWUMDIwtGflBfI6/a6Ss3NnAwMBYiJEHzUkDsvoSo1eGgYGxAWOUlrXaAL1jtcNwjIGBsTRjXl7mgXg+OhYliBgYGIsyqof41TK1F9abVSoGBsZyjEnyV00xJ0nnRbKIgYGxDSN/WELNhzAmwxYYGBg7MHrjX70DsmrRm+8HAwNjbUa1BK0G2V6hm6SPGBgYuzEmrc1eQlkdKbtoGGBgYGzAqN5oEl7zlLHwojEwMJZm5Mf91SZBtc1ZTRYxMDD2YVR/cG86mBy6RcUzBgbG0oy8Mdl7cDURTPZ2kRpiYGAsx3gXV34kV22FjtoSGBgYSzPy1WsVVA/1qv8PZRIGBsZjGXlhWS1B85ZDEnBH/x4YGBhLMCaDEXnZWehUxCkjBgYGRm8MopcyVneFgYGB0WsrVkc0qsMZzTobAwNjCca8iK02GHrp5iEVAwNjacZd8xq95K83ZNZsZGJgYDyP8QMDQ+tBQfKdvgAAAABJRU5ErkJggg=='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2020/08/27/视频-3dsmax绘制钙钛矿/" rel="prev" title="3DS MAX绘制钙钛矿">
+                                    
+                                        3DS MAX绘制钙钛矿
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/视频/"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;视频</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
         
       </section>
-  </article>
+    </article>
+  
 
-  <!-- 显示推荐文章和评论 -->
+  
+    <!-- 显示推荐文章和评论 -->
 
 
 
@@ -961,6 +1028,22 @@
     </section>
   </article>
 
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '测试测试44',
+      tools: true
+    }
+  </script>
 
 
 </div>
@@ -1167,6 +1250,20 @@
           
           
             
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#大家了解一下就好，下面才开始教程！"><span class="toc-text">大家了解一下就好，下面才开始教程！</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-新建Github仓库"><span class="toc-text">1. 新建Github仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-克隆Github仓库到本地"><span class="toc-text">2. 克隆Github仓库到本地</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-上传资源"><span class="toc-text">3.上传资源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-发布仓库"><span class="toc-text">4.发布仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-引用资源"><span class="toc-text">5.引用资源</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#emsp-emsp-emsp-emsp-ensp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-emsp-转自Mohen’s-blog"><span class="toc-text">                               转自Mohen’s blog</span></a></li></ol>
+    </div>
+  </section>
+
 
           
         
@@ -1624,18 +1721,6 @@
   <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.11/js/search.js"></script>
 
 
-
-  <script src="https://cdn.jsdelivr.net/gh/toddmotto/echo@1.7.3/src/echo.js"></script>
-  <script>
-    echo.init({
-      offset: 100,
-      throttle: 250,
-      unload: false,
-      callback: function (element, op) {
-        // console.log(element, 'has been', op + 'ed');
-      }
-    });
-  </script>
 
 
 <!-- 复制 -->
